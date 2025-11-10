@@ -1,8 +1,8 @@
-# 🌊 Fault Detection and Isolation (FDI) for a Three-Tank System
+# Fault Detection and Isolation (FDI) for a Three-Tank System
 
 This repository contains the implementation of a project focused on **diagnostics and monitoring** for a classic three-tank water system. Due to its non-linear dynamics and tank couplings, it serves as an ideal testbed for control and diagnostic algorithms. The primary method used for Fault Detection and Isolation (FDI) is **residual analysis**, based on a linearized state-space model and the Luenberger observer approach.
 
-### 🖼️ System Schematic
+### System Schematic
 
 ![Three-Tank System Schematic](img/system_schematic.png)
 
@@ -10,7 +10,7 @@ The diagram above illustrates the interconnected three-tank system, showing the 
 
 ---
 
-## ✨ Project Goal
+## Project Goal
 
 The main objective was to design and test a system capable of:
 * **Modeling** the dynamic behavior of the three-tank system.
@@ -20,7 +20,7 @@ The main objective was to design and test a system capable of:
 
 ---
 
-## ⚙️ Methodology
+## Methodology
 
 The core of the FDI system relies on **Model-Based Diagnostics**.
 
@@ -31,7 +31,7 @@ The core of the FDI system relies on **Model-Based Diagnostics**.
 
 ---
 
-## 🚨 Simulated Faults
+## Simulated Faults
 
 The simulation includes various faults to test the diagnostic capability.
 
@@ -44,7 +44,7 @@ The simulation includes various faults to test the diagnostic capability.
 
 ---
 
-## 📂 Repository Contents
+## Repository Contents
 
 * `diagnostics.m`: The main MATLAB script for running normal and faulty simulations, handling data interpolation, noise addition, residual calculation, and generating diagnostic plots.
 * `three_tank_model.m`: Function defining the non-linear dynamics of the **healthy** three-tank system (used to generate nominal data).
@@ -53,7 +53,7 @@ The simulation includes various faults to test the diagnostic capability.
 
 ---
 
-## 🛠️ Usage
+## Usage
 
 To run the simulation and generate the plots, execute the `diagnostics.m` script in the MATLAB environment. Note that the type and time of the fault are controlled within the `three_tank_model_faulty.m` function by uncommenting the relevant code section (e.g., the current version simulates a total pump failure at $t=120 \text{s}$).
 
